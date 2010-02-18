@@ -29,6 +29,7 @@ provides:
   Array.transpose
   Array.dot
   Array.cross
+  Array.project
   Array.determinant
   Array.vectorLength
   Array.normalize
