@@ -35,7 +35,7 @@ body {
 
 
 var log = function(){
-	if(console && console.log) console.log(arguments);
+	if(window['console'] && console.log) console.log(arguments);
 	
 	log.dom.run(arguments);
 };
@@ -274,7 +274,7 @@ $each(tests,function(data,name){
 		.adopt(new Element('a',{
 			text: name,
 			href: '#'+name.clean().replace(/ /ig,'-')
-		})).inject(list)
+		})).inject(testList)
 	if(runAll) test();
 });
 
