@@ -26,7 +26,6 @@ Array.implement({
 			length = length ? length : this.count()-start;
 		length = start ? length + 2 : length;
 		for(var i=start;i<length;i++){
-			console.log(i,this[i]);
 			sum += this[i];
 		}
 		return sum;
