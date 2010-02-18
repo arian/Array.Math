@@ -79,12 +79,14 @@ Fill the array with a range of numbers
 Create a sequence
 
 A function with a return
+
 	#JS
 	[].sequence(function(n){
 		return Math.pow(-1,n);
 	},[start],[length]);
 
 A recursive function without a return
+
 	#JS
 	// Fibonacci
 	[1,1].sequence(function(n){
