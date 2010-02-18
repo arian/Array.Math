@@ -186,7 +186,6 @@ Array.implement({
 	},
 	
 	distance: function(p2){
-		console.log(Math.pow(p2[0] - this[0],2),Math.pow(p2[1] - this[1],2));
 		return Math.sqrt(Math.pow(p2[0] - this[0],2) + Math.pow(p2[1] - this[1],2));
 	}
 	
