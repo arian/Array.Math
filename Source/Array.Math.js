@@ -83,10 +83,9 @@ Array.implement({
 	
 	substract: function(substract){
 		var arr = $type(substract) == 'array';
-		this.map(function(entity,i){
+		return this.map(function(entity,i){
 			return arr ? entity - substract[i] : entity - substract;
 		});
-		return this;
 	},
 	
 	count: function(){
