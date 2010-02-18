@@ -20,11 +20,15 @@ Array.implement({
 
 	// Calculus
 	
-	sum: function(){
-		var sum = 0;
-		this.each(function(entity){
-			sum += entity;
-		});
+	sum: function(start,length){
+		var sum = 0, 
+			start = start ? start : 0,
+			length = length ? length : this.count()-start;
+		length = start ? length + 2 : length;
+		for(var i=start;i<length;i++){
+			console.log(i,this[i]);
+			sum += this[i];
+		}
 		return sum;
 	},
 	
@@ -141,9 +145,7 @@ Array.implement({
 	},
 	
 	vectorLength: function(){
-		return Math.sqrt(this.map(function(entity){
-			return Math.pow(entity,2);
-		}).sum());
+		return Math.sqrt(this.dot(this));
 	},
 	
 	normalize: function(){
@@ -151,6 +153,10 @@ Array.implement({
 		return this.map(function(entity){
 			return entity/length;
 		});
+	},
+	
+	angle: function(a){
+		return Math.acos(this.dot(a)/(this.vectorLength()*a.vectorLength()));
 	},
 	
 	// Geometry

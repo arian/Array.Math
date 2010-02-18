@@ -18,6 +18,7 @@ Sum all the entities of the array
 
 	#JS
 	[2,5,1,6].sum(); // 14
+	[2,5,2,7,7,12,8].sum([start],[length])
 	
 ### Array.product
 
@@ -168,7 +169,7 @@ Find the determinant of a 2 by 2 matrix
 	#JS
 	[[4,6],[3,5]].determinant() // 2
 
-### Array.vectorLength()
+### Array.vectorLength
 
 Find the vector of a vector
 
@@ -179,12 +180,19 @@ Find the vector of a vector
 	[150,300,100].vectorLength();
 
 
-### Array.normalize();
+### Array.normalize
 
 Get the normalized vector, so that the vector length is 1
 
 	#JS
 	[8,6].normalize() // [4/5,3/5]
+
+### Array.angle
+
+Find the angle between two vectors
+
+	#JS
+	[3,7,1].angle([3,3,6]) / Math.PI // 0.2798476073884561 pi
 
 ### Array.slope()
 

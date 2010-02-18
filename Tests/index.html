@@ -27,7 +27,6 @@ body {
 </style>
 
 <script src="mootools-1.2.4-core.js" type="text/javascript"></script>
-<script src="mootools-1.2.4.4-more.js" type="text/javascript"></script>
 <script src="../Source/Array.Math.js" type="text/javascript"></script>
 
 <script type="text/javascript">
@@ -62,6 +61,13 @@ var tests = {
 			return [2,5,1,6].sum();
 		},
 		code: '[2,5,1,6].sum() // 14'
+	},
+	
+	'Sum a part of the array': {
+		fn: function(){
+			return [2,5,2,7,7,12,8].sum(2,3);
+		},
+		code: '[2,5,2,7,7,12,8].sum(2,3) // 2+7+7 = 16'
 	},
 	
 	'Product': {
@@ -221,6 +227,13 @@ var tests = {
 			return [8,6].normalize().vectorLength();
 		},
 		code: '[8,6].normalize().vectorLength() // 1'
+	},
+	
+	'Angle between two vectors': {
+		fn: function(){
+			return [3,7,1].angle([3,3,6]) / Math.PI;
+		},
+		code: '[3,7,1].angle([3,3,6]) / Math.PI // 0.2798476073884561 pi'
 	},
 	
 	'Slope between two points': {
