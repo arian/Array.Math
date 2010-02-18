@@ -10,8 +10,6 @@ authors:
 requires: 
   core/1.2.4: 
   - Array
-  more/'*':
-  - Array.Extras
 
 provides: 
   Array.sum
@@ -121,7 +119,7 @@ Array.implement({
 	},
 	
 	variance: function(){
-		var avg = this.average();
+		var avg = this.sum()/this.count();
 		return this.map(function(x){
 			return Math.pow((x - avg),2);
 		}).sum() / this.length;
