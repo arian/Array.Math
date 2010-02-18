@@ -37,8 +37,6 @@ provides:
 ...
 */
 
-
-
 Array.implement({
 
 	// Calculus
@@ -119,10 +117,10 @@ Array.implement({
 	},
 	
 	variance: function(){
-		var avg = this.sum()/this.count();
+		var length = this.count(), avg = this.sum()/length;
 		return this.map(function(x){
 			return Math.pow((x - avg),2);
-		}).sum() / this.length;
+		}).sum() / length;
 	},
 	
 	stdDeviation: function(){
