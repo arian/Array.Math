@@ -147,9 +147,7 @@ Array.implement({
 	
 	normalize: function(){
 		var length = this.vectorLength();
-		return this.map(function(entity){
-			return entity/length;
-		});
+		return this.quotient(length);
 	},
 	
 	angle: function(a){
@@ -163,9 +161,7 @@ Array.implement({
 	},
 	
 	distance: function(p2){
-		return Math.sqrt(this.map(function(point,i){
-			return Math.pow(p2[i] - point,2);
-		}).sum());
+		return Math.sqrt(this.substract(p2).power(2).sum());
 	}
 	
 });
