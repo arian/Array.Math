@@ -196,14 +196,14 @@ Find the angle between two vectors
 
 ### Array.slope()
 
-Get the slope between two points
+Get the slope between two points (2d only, there isn't really such thing as a 3d slope)
 
 	#JS
 	[3,4].slope([5,9]) // 2
 
 ### Array.distance()
 
-Get the distance between two points
+Get the distance between two points (more-dimensional)
 
 	#JS
 	[4,1].distance([7,5]) // 5
