@@ -165,7 +165,9 @@ Array.implement({
 	},
 	
 	distance: function(p2){
-		return Math.sqrt(Math.pow(p2[0] - this[0],2) + Math.pow(p2[1] - this[1],2));
+		return Math.sqrt(this.map(function(point,i){
+			return Math.pow(p2[i] - point,2);
+		}).sum());
 	}
 	
 });
