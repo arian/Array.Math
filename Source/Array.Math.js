@@ -25,9 +25,7 @@ Array.implement({
 			start = start ? start : 0,
 			length = length ? length : this.count()-start;
 		length = start ? length + 2 : length;
-		for(var i=start;i<length;i++){
-			sum += this[i];
-		}
+		for(var i=start;i<length;i++) sum += this[i];
 		return sum;
 	},
 	
@@ -72,9 +70,7 @@ Array.implement({
 	
 	range: function(start,end,step){
 		step = step ? step : 1;
-		for(var i=start; i<=end;i+=step){
-			this.push(i);
-		}
+		for(var i=start; i<=end;i+=step) this.push(i);
 		return this;
 	},
 	
