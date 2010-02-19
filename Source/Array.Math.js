@@ -111,9 +111,9 @@ Array.implement({
 	
 	// Vector and matrices
 	
-	transpose: function(arr){
+	transpose: function(){
 		var trans = [];
-		(arr || this).each(function(row,y){
+		this.each(function(row,y){
 			row.each(function(col,x){
 				if(!trans[x]) trans[x] = [];
 				trans[x][y] = col;
