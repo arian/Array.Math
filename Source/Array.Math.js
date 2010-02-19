@@ -100,9 +100,7 @@ Array.implement({
 	
 	variance: function(){
 		var length = this.count(), avg = this.sum()/length;
-		return this.map(function(x){
-			return Math.pow((x - avg),2);
-		}).sum() / length;
+		return this.substract(avg).power(2).sum()/length;
 	},
 	
 	stdDeviation: function(){
