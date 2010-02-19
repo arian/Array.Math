@@ -93,9 +93,7 @@ Array.implement({
 	median: function(){
 		this.sort();
 		var middle = (this.length+1) / 2;
-		var even = !(this.length % 2);
-		
-		return !even ? this[middle-1] : (this[middle - 1.5]+this[middle - 0.5])/2;
+		return (this.length % 2) ? this[middle-1] : (this[middle - 1.5]+this[middle - 0.5])/2;
 	},
 	
 	variance: function(){
@@ -146,8 +144,7 @@ Array.implement({
 	},
 	
 	normalize: function(){
-		var length = this.vectorLength();
-		return this.quotient(length);
+		return this.quotient(this.vectorLength());
 	},
 	
 	angle: function(a){
