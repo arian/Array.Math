@@ -82,7 +82,7 @@ Array.implement({
 		start = start ? start : 0;
 		length = length ? length : 10;
 		for(var i = start; i < (start+length); i++){
-			var e = fn.run([i], this);
+			var e = fn.apply(this,[i]);
 			if(e) this[i] = e; 
 		}
 		return this;
