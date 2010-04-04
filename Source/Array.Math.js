@@ -79,7 +79,7 @@ Array.implement({
 		length = length ? length : 10;
 		for(var i = start; i < (start+length); i++){
 			var e = fn.apply(this,[i]);
-			if(e) this[i] = e; 
+			if(e != null || e != undefined) this[i] = e; 
 		}
 		return this;
 	},
