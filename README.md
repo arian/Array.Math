@@ -4,7 +4,7 @@ AnimateImage
 Array.Math is a collection of calculation with arrays.
 You can do all kind of things with arrays. You can see them as 
 date for statistic analysis, you can see them as vectors and matrices
-for liniear algebra, or just use them for calculus like add, substract and
+for linear algebra, or just use them for calculus like add, substract and
 products or more advanced calculus with sequences.
 
 ![Screenshot](http://github.com/arian/Array.Math/raw/master/screenshot.png)
