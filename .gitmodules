@@ -1,0 +1,6 @@
+[submodule "Specs/SlickSpeck"]
+	path = Specs/SlickSpeck
+	url = http://github.com/mootools/mootools-core-specs.git
+[submodule "Specs/SlickSpec"]
+	path = Specs/SlickSpec
+	url = http://github.com/mootools/mootools-core-specs.git
