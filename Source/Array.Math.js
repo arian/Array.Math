@@ -30,35 +30,35 @@ Array.implement({
 	},
 	
 	product: function(p){
-		var arr = $type(p) == 'array';
+		var arr = typeOf(p) == 'array';
 		return this.map(function(entity,i){
 			return arr ? (entity * p[i]) : (entity * p);
 		});
 	},
 	
 	quotient: function(q){
-		var arr = $type(q) == 'array';
+		var arr = typeOf(q) == 'array';
 		return this.map(function(entity,i){
 			return arr ? (entity / q[i]) : (entity / q);
 		});
 	},
 	
 	power: function(pow){
-		var arr = $type(pow) == 'array';
+		var arr = typeOf(pow) == 'array';
 		return this.map(function(entity,i){
 			return Math.pow(entity,arr ? pow[i] : pow);
 		});
 	},
 	
 	add: function(add){
-		var arr = $type(add) == 'array';
+		var arr = typeOf(add) == 'array';
 		return this.map(function(entity,i){
 			return arr ? entity + add[i] : entity + add;
 		});
 	},
 	
 	substract: function(substract){
-		var arr = $type(substract) == 'array';
+		var arr = typeOf(substract) == 'array';
 		return this.map(function(entity,i){
 			return arr ? entity - substract[i] : entity - substract;
 		});
@@ -127,7 +127,7 @@ Array.implement({
 	},
 	
 	projection: function(proj){
-		return proj.product(this.dot(proj)/proj.dot(proj));
+		return proj.product(this.dot(proj) / proj.dot(proj));
 	},
 	
 	determinant: function(){
@@ -144,7 +144,7 @@ Array.implement({
 	},
 	
 	angle: function(a){
-		return Math.acos(this.dot(a)/(this.vectorLength()*a.vectorLength()));
+		return Math.acos(this.dot(a) / (this.vectorLength() * a.vectorLength()));
 	},
 	
 	// Geometry
