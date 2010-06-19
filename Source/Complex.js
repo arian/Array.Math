@@ -1,8 +1,8 @@
 
 var Complex = new Type('Complex', function(real, im){
 	
-	this.real = Number.from(real);
-	this.im = Number.from(im);
+	this.real = +Number.from(real);
+	this.im = +Number.from(im);
 	
 });
 
