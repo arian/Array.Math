@@ -12,7 +12,7 @@ requires:
   - Core/1.2.4:Number
 
 provides:
-  - Complex
+  - Number
 
 ...
 */
