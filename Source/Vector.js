@@ -1,6 +1,20 @@
-/**
- * @author Arian Stolwijk
- */
+/*
+---
+description: Provides a way to use Vectors in JavaScript
+
+license: MIT-style
+
+authors:
+  - Arian Stolwijk
+
+requires: 
+  - Core/1.2.4:*
+
+provides:
+  - Complex
+
+...
+*/
 
 Number.precision = 1e-6;
 
