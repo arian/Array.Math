@@ -50,7 +50,7 @@ Add a number to each entity in the array
 
 	#JS
 	[2,5,1].add(4) // [6,9,5]
-	[2,5,1].add([1,2,3]) // [2,7,4]
+	[2,5,1].add([1,2,3]) // [3,7,4]
 
 ### Array.substract
 
@@ -58,7 +58,7 @@ Substract a number to each entity of the array
 
 	#JS
 	[6,9,5].substract(4) // [2,5,1]
-	[2,7,4].substract([1,2,3]) // [2,5,1]
+	[2,7,4].substract([1,2,3]) // [1,5,1]
 
 ### Array.count
 
