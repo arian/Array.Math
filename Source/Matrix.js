@@ -9,6 +9,7 @@ authors:
 
 requires: 
   - Core/1.2.4:*
+  - Vector
   - Complex
 
 provides:
@@ -155,3 +156,14 @@ Matrix.extend({
 Matrix.extend({
 	Identity: Matrix.I
 });
+
+
+Vector.implement({
+	
+	getDiagnalMatrix: function(){
+		return Matrix.Diagonal(this.elements);
+	}
+	
+});
+
+

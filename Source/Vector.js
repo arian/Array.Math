@@ -135,10 +135,6 @@ var Vector = new Class({
 		return this.elements.indexOf(x);
 	},
 	
-	getDiagnalMatrix: function(){
-		return Matrix.Diagonal(this.elements);
-	},
-	
 	round: function(){
 		return this.map(function(x) {
 			return Math.round(x);
