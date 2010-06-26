@@ -16,13 +16,15 @@ Object.append(methods, {
 
 Number.implement(methods);
 
-
-var oldSqrt = Number.prototype.sqrt;
+})();
 
 // Replace sqrt method so it can handle negative values
+(function(sqrt){
+	
 Number.prototype.sqrt = function(){
 	if(this < 0) return new Complex(0, Math.sqrt(-this));
-	return oldSqrt.apply(this);
+	return sqrt.apply(this);
 };
+	
+})(Number.prototype.sqrt);
 
-})();
