@@ -11,6 +11,7 @@ requires:
   - Core/1.2.4:Array
 
 provides:
+  - Array.Math
   - Array.sum
   - Array.product
   - Array.quotient

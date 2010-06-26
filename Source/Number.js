@@ -9,7 +9,7 @@ authors:
 
 requires: 
   - Complex
-  - Core/1.2.4:Number
+  - Core/Number
 
 provides:
   - Number

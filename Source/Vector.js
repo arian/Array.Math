@@ -8,7 +8,10 @@ authors:
   - Arian Stolwijk
 
 requires: 
-  - Core/1.2.4:*
+  - Core/Class
+  - Core/Array
+  - Core/Number
+  - Array.Math
   - Complex
 
 provides:
@@ -100,7 +103,7 @@ var Vector = new Class({
 	},
 	
 	add: function(){
-		this.elements = this.elements = Array.prototype.add.apply(this.elements, arguments);
+		this.elements = Array.prototype.add.apply(this.elements, arguments);
 		return this;
 	},
 	

@@ -8,7 +8,9 @@ authors:
   - Arian Stolwijk
 
 requires: 
-  - Core/1.2.4:*
+  - Core/Class
+  - Core/Array
+  - Core/Number
   - Vector
   - Complex
 
@@ -22,8 +24,8 @@ var Matrix = new Class({
 	
 	vectors: [],
 	
-	initialize: function(vectors){
-		this.setVectors(vectors);
+	initialize: function(){
+		this.setVectors(Array.flatten(arguments));
 	},
 	
 	setVectors: function(vects){
@@ -85,6 +87,17 @@ var Matrix = new Class({
 		Array.prototype.each.apply(this.vectors, arguments);
 		return this;
 	},
+	
+	addToRow: function(m, value){
+		if(!instanceOf(value, Vector)){
+			value = Vector.Zero(this.getRows()).add(value);
+		}
+		this.vectors.each(function(vec, n){
+			this.setElement(m, n+1, vec.getElement(m) + value.getElement(n+1));
+		}.bind(this));
+		return this;
+	},
+	
 /*	
 	ref: function(){
 		var size = this.getSize();
