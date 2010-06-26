@@ -1,11 +1,19 @@
-AnimateImage
-===============
+Array.Math
+==========
 
 Array.Math is a collection of calculation with arrays.
 You can do all kind of things with arrays. You can see them as 
-date for statistic analysis, you can see them as vectors and matrices
+data for statistic analysis, you can see them as vectors and matrices
 for linear algebra, or just use them for calculus like add, substract and
 products or more advanced calculus with sequences.
+
+The next steps are Vectors and Matrices. The aim is to be able to calculate
+eigenvalues and eigenvectors from a given Matrix. Singular Value Decomposition
+would be nice as well. To do this, JavaScript needs to be extended so it can
+handle Complex numbers, this can be found in Complex.js
+
+To be sure all the methods work as expected, there is a Specs folder that 
+contains MooTools SlickSpec tests.
 
 ![Screenshot](http://github.com/arian/Array.Math/raw/master/screenshot.png)
 
@@ -50,7 +58,7 @@ Add a number to each entity in the array
 
 	#JS
 	[2,5,1].add(4) // [6,9,5]
-	[2,5,1].add([1,2,3]) // [2,7,4]
+	[2,5,1].add([1,2,3]) // [3,7,4]
 
 ### Array.substract
 
@@ -58,7 +66,7 @@ Substract a number to each entity of the array
 
 	#JS
 	[6,9,5].substract(4) // [2,5,1]
-	[2,7,4].substract([1,2,3]) // [2,5,1]
+	[2,7,4].substract([1,2,3]) // [1,5,1]
 
 ### Array.count
 

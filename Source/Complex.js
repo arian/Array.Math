@@ -1,3 +1,20 @@
+/*
+---
+description: Provides a way to use Complex Numbers in JavaScript
+
+license: MIT-style
+
+authors:
+  - Arian Stolwijk
+
+requires: 
+  - Core/1.2.4:*
+
+provides:
+  - Complex
+
+...
+*/
 
 var Complex = new Type('Complex', function(real, im){
 	

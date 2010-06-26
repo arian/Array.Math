@@ -5,13 +5,33 @@ description: Array.Math is an extension for Array with Math methods
 license: MIT-style
 
 authors:
-- Arian Stolwijk
+  - Arian Stolwijk
 
 requires: 
-  core/1.2.4: 
-  - Array
+  - Core/1.2.4:Array
 
-provides: [Array.sum,Array.product,Array.quotient,Array.power,Array.add,Array.substract,Array.count,Array.range,Array.sequence,Array.median,Array.variance,Array.stdDeviation,Array.transpose,Array.dot,Array.cross,Array.project,Array.determinant,Array.vectorLength,Array.normalize,Array.slope,Array.distance]
+provides:
+  - Array.sum
+  - Array.product
+  - Array.quotient
+  - Array.power
+  - Array.add
+  - Array.substract
+  - Array.count
+  - Array.range
+  - Array.sequence
+  - Array.median
+  - Array.variance
+  - Array.stdDeviation
+  - Array.transpose
+  - Array.dot
+  - Array.cross
+  - Array.project
+  - Array.determinant
+  - Array.vectorLength
+  - Array.normalize
+  - Array.slope
+  - Array.distance
 
 ...
 */

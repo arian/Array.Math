@@ -1,3 +1,21 @@
+/*
+---
+description: Provides a way to use Complex Numbers in JavaScript
+
+license: MIT-style
+
+authors:
+  - Arian Stolwijk
+
+requires: 
+  - Complex
+  - Core/1.2.4:Number
+
+provides:
+  - Number
+
+...
+*/
 
 (function(){
 
