@@ -9,14 +9,13 @@ authors:
 
 requires: 
   - Core/1.2.4:*
+  - Complex
 
 provides:
   - Vector
 
 ...
 */
-
-Number.precision = 1e-6;
 
 var Vector = new Class({
 	

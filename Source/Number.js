@@ -17,6 +17,8 @@ provides:
 ...
 */
 
+Number.precision = 1e-6;
+
 (function(){
 
 var methods = {};
