@@ -5,3 +5,10 @@ category: Native
 tags: [Math,Calculus,Statistics,Vectors,Matrices,Geometry]
 demo: http://www.aryweb.nl/projects/Array.Math/
 docs: http://github.com/arian/Array.Math/blob/master/README.md
+
+sources:
+  - "Source/Array.Math.js"
+  - "Source/Complex.js"
+  - "Source/Number.js"
+  - "Source/Vector.js"
+  - "Source/Matrix.js"
