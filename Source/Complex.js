@@ -16,7 +16,9 @@ provides:
 ...
 */
 
-var Complex = new Type('Complex', function(real, im){
+(function(){
+
+var Complex = this.Complex = new Type('Complex', function(real, im){
 	
 	this.real = +Number.from(real);
 	this.im = +Number.from(im);
@@ -93,3 +95,6 @@ Complex.implement({
 	}
 	
 });
+
+})();
+

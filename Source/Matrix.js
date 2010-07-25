@@ -20,7 +20,9 @@ provides:
 ...
 */
 
-var Matrix = new Class({
+(function(){
+
+var Matrix = this.Matrix = new Class({
 	
 	vectors: [],
 	
@@ -179,4 +181,6 @@ Vector.implement({
 	
 });
 
+
+})();
 

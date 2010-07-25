@@ -20,7 +20,9 @@ provides:
 ...
 */
 
-var Vector = new Class({
+(function(){
+
+var Vector = this.Vector = new Class({
 	
 	elements: [],
 	
@@ -205,3 +207,6 @@ Vector.extend({
 	k: new Vector('0 0 1')
 	
 });
+
+})();
+
