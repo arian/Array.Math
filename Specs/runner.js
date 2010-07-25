@@ -1,8 +1,4 @@
 
-var GLOBAL = function(){
-	for(var key in this) global[key] = this[key];
-};
-
 require.paths.push("./jasmine-node/lib");
 var jasmine = require('jasmine');
 var sys = require('sys');
