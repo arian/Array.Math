@@ -19,6 +19,7 @@ process.argv.forEach(function(arg){
   }
 });
 
+
 require('./mootools');
 require('./../Source/Array.Math');
 
@@ -27,6 +28,6 @@ require('./../Source/Vector');
 require('./../Source/Matrix');
 
 
-jasmine.executeSpecsInFolder(__dirname + '/spec', function(runner, log){
+jasmine.runSpecs(jasmine.getAllSpecFiles(__dirname + '/spec'), function(runner, log){
   process.exit(runner.results().failedCount);
 }, isVerbose, showColors);
