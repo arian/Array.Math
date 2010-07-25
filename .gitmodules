@@ -1,3 +1,6 @@
 [submodule "Packager"]
 	path = Packager
 	url = http://github.com/kamicane/packager.git
+[submodule "Specs/jasmine-node"]
+	path = Specs/jasmine-node
+	url = http://github.com/cpojer/jasmine-node.git
