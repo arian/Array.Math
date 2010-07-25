@@ -1,16 +1,30 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+  "http://www.w3.org/TR/html4/loose.dtd">
+<html>
 <head>
-<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+  <title>MooTools Class Extras</title>
+  <link rel="stylesheet" type="text/css" href="Jasmine/jasmine.css">
+  <script type="text/javascript" src="Jasmine/jasmine.js"></script>
+  <script type="text/javascript" src="Jasmine/jasmine-html.js"></script>
 
+  <script type="text/javascript" src="mootools-core.js"></script>
+  <script type="text/javascript" src="../Source/Array.Math.js"></script>
+  <script type="text/javascript" src="../Source/Complex.js"></script>
+  <script type="text/javascript" src="../Source/Number.js"></script>
+  <script type="text/javascript" src="../Source/Vector.js"></script>
+  <script type="text/javascript" src="../Source/Matrix.js"></script>
 
-<title>SlickSpec for Array.Math</title></head>
+  <script type="text/javascript" src="Array.Math.js"></script>
+  <script type="text/javascript" src="Vector.js"></script>
+
+</head>
 <body>
-
-<ul>
-	<li><a href="Array.Math.html?specs=Array.Math">Array.Math</a></li>
-	<li><a href="Array.Math.html?specs=Linear">Linear Algebra (Vector, Matrix)</a></li>
-</ul>
-
+<script type="text/javascript">
+window.onload = function(){
+  jasmine.getEnv().addReporter(new jasmine.TrivialReporter());
+  jasmine.getEnv().execute();
+};
+</script>
 </body>
 </html>
+  
