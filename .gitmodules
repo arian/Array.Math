@@ -1,6 +1,3 @@
-[submodule "Specs/SlickSpec"]
-	path = Specs/SlickSpec
-	url = http://github.com/mootools/mootools-core-specs.git
 [submodule "Packager"]
 	path = Packager
 	url = http://github.com/kamicane/packager.git
