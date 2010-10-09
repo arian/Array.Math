@@ -44,7 +44,7 @@ Number.implement(methods);
 (function(sqrt){
 	
 Number.prototype.sqrt = function(){
-	if(this < 0) return new Complex(0, Math.sqrt(-this));
+	if (this < 0) return new Complex(0, Math.sqrt(-this));
 	return sqrt.apply(this);
 };
 	

@@ -143,7 +143,7 @@ var Vector = this.Vector = new Class({
 	},
 	
 	round: function(){
-		return this.map(function(x) {
+		return this.map(function(x){
 			return Math.round(x);
 		});
 	},
@@ -190,7 +190,7 @@ Vector.extend({
 	
 	Random: function(n){
 		var els = [];
-		while (n--) {
+		while (n--){
 			els.push(Math.random());
 		}
 		return new Vector(els);
