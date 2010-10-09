@@ -43,46 +43,46 @@ Array.implement({
 
 	// Calculus
 	
-	sum: function(start,length){
+	sum: function(start, length){
 		var sum = 0, 
 			start = start ? start : 0,
-			length = length ? length : this.count()-start;
+			length = length ? length : this.count() - start;
 		length = start ? length + 2 : length;
-		for(var i=start;i<length;i++) sum += this[i];
+		for (var i = start; i < length; i++) sum += this[i];
 		return sum;
 	},
 	
 	product: function(p){
 		var arr = typeOf(p) == 'array';
-		return this.map(function(entity,i){
+		return this.map(function(entity, i){
 			return arr ? (entity * p[i]) : (entity * p);
 		});
 	},
 	
 	quotient: function(q){
 		var arr = typeOf(q) == 'array';
-		return this.map(function(entity,i){
+		return this.map(function(entity, i){
 			return arr ? (entity / q[i]) : (entity / q);
 		});
 	},
 	
 	power: function(pow){
 		var arr = typeOf(pow) == 'array';
-		return this.map(function(entity,i){
+		return this.map(function(entity, i){
 			return Math.pow(entity,arr ? pow[i] : pow);
 		});
 	},
 	
 	add: function(add){
 		var arr = typeOf(add) == 'array';
-		return this.map(function(entity,i){
+		return this.map(function(entity, i){
 			return arr ? entity + add[i] : entity + add;
 		});
 	},
 	
 	substract: function(substract){
 		var arr = typeOf(substract) == 'array';
-		return this.map(function(entity,i){
+		return this.map(function(entity, i){
 			return arr ? entity - substract[i] : entity - substract;
 		});
 	},
@@ -93,16 +93,16 @@ Array.implement({
 	
 	range: function(start,end,step){
 		step = step ? step : 1;
-		for(var i=start; i<=end;i+=step) this.push(i);
+		for (var i = start; i <= end; i += step) this.push(i);
 		return this;
 	},
 	
 	sequence: function(fn,start,length){
 		start = start ? start : 0;
 		length = length ? length : 10;
-		for(var i = start; i < (start+length); i++){
-			var e = fn.apply(this,[i]);
-			if(e != null || e != undefined) this[i] = e; 
+		for (var i = start; i < (start + length); i++){
+			var e = fn.apply(this, [i]);
+			if (e != null || e != undefined) this[i] = e; 
 		}
 		return this;
 	},
@@ -111,13 +111,13 @@ Array.implement({
 	
 	median: function(){
 		this.sort();
-		var middle = (this.length+1) / 2;
-		return (this.length % 2) ? this[middle-1] : (this[middle - 1.5]+this[middle - 0.5])/2;
+		var middle = (this.length + 1) / 2;
+		return (this.length % 2) ? this[middle - 1] : (this[middle - 1.5] + this[middle - 0.5]) / 2;
 	},
 	
 	variance: function(){
-		var length = this.count(), avg = this.sum()/length;
-		return this.substract(avg).power(2).sum()/length;
+		var length = this.count(), avg = this.sum() / length;
+		return this.substract(avg).power(2).sum() / length;
 	},
 	
 	stdDeviation: function(){
@@ -129,8 +129,8 @@ Array.implement({
 	transpose: function(){
 		var trans = [];
 		this.each(function(row,y){
-			row.each(function(col,x){
-				if(!trans[x]) trans[x] = [];
+			row.each(function(col, x){
+				if (!trans[x]) trans[x] = [];
 				trans[x][y] = col;
 			});
 		});

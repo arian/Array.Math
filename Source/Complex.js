@@ -28,9 +28,9 @@ var Complex = this.Complex = new Type('Complex', function(real, im){
 });
 
 Complex.from = function(obj){
-	if(instanceOf(obj, Complex)) return obj;
+	if (instanceOf(obj, Complex)) return obj;
 	var type = typeOf(obj);
-	if(type == 'array') return new Complex(obj[0], obj[1]);
+	if (type == 'array') return new Complex(obj[0], obj[1]);
 	return new Complex(obj);
 };
 
@@ -39,7 +39,7 @@ Complex.i = new Complex(0, 1);
 Complex.implement({
 	
 	magnitude: function(){
-		return Math.sqrt(this.real*this.real + this.im*this.im);
+		return Math.sqrt(this.real * this.real + this.im * this.im);
 	},
 	
 	angle: function(){
@@ -93,7 +93,7 @@ Complex.implement({
 	},
 	
 	toString: function(){
-		return this.real+'+'+this.im+'i';
+		return this.real + '+' + this.im + 'i';
 	}
 	
 });

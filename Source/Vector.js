@@ -34,8 +34,8 @@ var Vector = this.Vector = new Class({
 	
 	setElements: function(){
 		var els = Array.from(arguments).flatten();
-		if(els[0].elements) els = els[0].elements;
-		if(typeof els[0] == 'string') els = els[0].split(' ');
+		if (els[0].elements) els = els[0].elements;
+		if (typeof els[0] == 'string') els = els[0].split(' ');
 		this.elements = Array.from(els.elements || els).map(function(e){
 			return Number.from(e);
 		});
@@ -43,11 +43,11 @@ var Vector = this.Vector = new Class({
 	},
 	
 	getElement: function(i){
-		return (i < 1 || i > this.elements.length) ? null : this.elements[i-1];
+		return (i < 1 || i > this.elements.length) ? null : this.elements[i - 1];
 	},
 	
 	setElement: function(i, value){
-		if(i >= 1 && i <= this.elements.length) this.elements[i-1] = Number.from(value);
+		if (i >= 1 && i <= this.elements.length) this.elements[i - 1] = Number.from(value);
 		return this;
 	},
 	
@@ -60,13 +60,13 @@ var Vector = this.Vector = new Class({
 	},
 	
 	isEqual: function(vector){
-		var arr = vector.elements || vector;
-		var n = this.elements.length;
-		if(arr.length != n) return false;
+		var arr = vector.elements || vector,
+			n = this.elements.length;
+		if (arr.length != n) return false;
 		var substract = this.elements.substract(vector);
 		do {
-			if(Math.abs(substract[n] > Number.precision)) return false; 
-		} while(n--)
+			if (Math.abs(substract[n] > Number.precision)) return false; 
+		} while (n--)
 		return true;		
 	},
 	
@@ -133,7 +133,7 @@ var Vector = this.Vector = new Class({
 		m = 0;
 		this.map(function(e){
 			e = Math.abs(e);
-			if(e > m) m = e; 
+			if (e > m) m = e; 
 		});
 		return m;
 	},
@@ -160,18 +160,18 @@ var Vector = this.Vector = new Class({
 	
 	to3D: function(){
 		var l = this.elements.length; 
-		if(l < 3){
+		if (l < 3){
 			n = 3 - l;
 			do {
 				this.elements.push(0)
-			} while(n--);
+			} while (n--);
 		}
 		this.elements = this.elements.slice(0, 3);
 		return this;
 	},
 	
 	inspect: function(shrt){
-		return (shrt === false ? '' : '[')+this.elements.join(shrt === false ? "\n" : ', ')+(shrt === false ? '' : ']');
+		return (shrt === false ? '' : '[') + this.elements.join(shrt === false ? '\n' : ', ') + (shrt === false ? '' : ']');
 	},
 	
 	toArray: function(){
@@ -184,13 +184,13 @@ Vector.extend({
 	
 	from: function(){
 		var els = Array.from(arguments).flatten();
-		if(typeOf(els[0]) == 'object' && Object.values) els = Object.values(els[0]);
+		if (typeOf(els[0]) == 'object' && Object.values) els = Object.values(els[0]);
 		return new Vector(els);
 	},
 	
 	Random: function(n){
 		var els = [];
-		while(n--) {
+		while (n--) {
 			els.push(Math.random());
 		}
 		return new Vector(els);
@@ -198,7 +198,7 @@ Vector.extend({
 	
 	Zero: function(n){
 		var els = [];
-		while(n--){
+		while (n--){
 			els.push(0);
 		}
 		return new Vector(els);		

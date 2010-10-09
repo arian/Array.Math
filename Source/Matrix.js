@@ -33,10 +33,10 @@ var Matrix = this.Matrix = new Class({
 	},
 	
 	setVectors: function(vects){
-		var l = vects.length;
-		var matrix = [];
+		var l = vects.length,
+			matrix = [];
 		vects.each(function(vec){
-			if(instanceOf(vec, Vector)){
+			if (instanceOf(vec, Vector)){
 				matrix.push(vec);
 			}
 		});
@@ -45,18 +45,18 @@ var Matrix = this.Matrix = new Class({
 	
 	getElement: function(m, n){
 		var vec = this.getColumn(n);
-		if(vec) return vec.getElement(m);
+		if (vec) return vec.getElement(m);
 	},
 	
 	setElement: function(m, n, value){
 		var vec = this.getColumn(n);
-		if(vec) vec.setElement(m, value);
+		if (vec) vec.setElement(m, value);
 		return this;
 	},
 	
 	getColumn: function(i){
-		i = i-1;
-		if(this.vectors[i]) return this.vectors[i];
+		i = i - 1;
+		if (this.vectors[i]) return this.vectors[i];
 	},
 	
 	getRow: function(i){
@@ -78,7 +78,7 @@ var Matrix = this.Matrix = new Class({
 		var m = 0;
 		this.vectors.each(function(vec){
 			var l = vec.getDimensions();
-			if(l > m) m = l;
+			if (l > m) m = l;
 		});
 		return m;
 	},
@@ -93,11 +93,11 @@ var Matrix = this.Matrix = new Class({
 	},
 	
 	addToRow: function(m, value){
-		if(!instanceOf(value, Vector)){
+		if (!instanceOf(value, Vector)){
 			value = Vector.Zero(this.getRows()).add(value);
 		}
 		this.vectors.each(function(vec, n){
-			this.setElement(m, n+1, vec.getElement(m) + value.getElement(n+1));
+			this.setElement(m, n + 1, vec.getElement(m) + value.getElement(n + 1));
 		}.bind(this));
 		return this;
 	},
@@ -106,23 +106,22 @@ var Matrix = this.Matrix = new Class({
 	ref: function(){
 		var size = this.getSize();
 		var i = 1, j = 1l
-		while(i <= size.m && j <= size.n){
+		while (i <= size.m && j <= size.n){
 			maxi = i;
-			
 		}
 	},
 */	
 	inspect: function(){
 		var i, l, size = this.getSize();
 		var row, rows = [];
-		for(i=1; i <= size.m; i++){
+		for (i = 1; i <= size.m; i++){
 			row = [];
 			this.vectors.each(function(vec){
 				row.push(vec.getElement(i));
 			});
 			rows.push(row.join(' '));
 		}
-		return '['+rows.join("\n")+']';
+		return '[' + rows.join('\n') + ']';
 	}
 	
 });
@@ -130,7 +129,7 @@ var Matrix = this.Matrix = new Class({
 Matrix.extend({
 		
 	Random: function(m, n){
-		if(!n) n = m;
+		if (!n) n = m;
 		var els = [];
 		do {
 			els.push(Vector.Random(m));
@@ -139,7 +138,7 @@ Matrix.extend({
 	},
 	
 	Zero: function(m, n){
-		if(!n) n = m;
+		if (!n) n = m;
 		var els = [];
 		do {
 			els.push(Vector.Zero(m));
@@ -152,7 +151,7 @@ Matrix.extend({
 		var vectors = [], l = els.length;
 		els.each(function(el, i){
 			var vec = new Vector.Zero(l);
-			vec.setElement(i+1, el);
+			vec.setElement(i + 1, el);
 			vectors.push(vec);
 		});
 		return new Matrix(vectors);
@@ -164,7 +163,7 @@ Matrix.extend({
 	I: function(m, n){
 		var matrix = Matrix.Zero(m, n);
 		matrix.each(function(vec, i){
-			vec.setElement(i+1, 1);
+			vec.setElement(i + 1, 1);
 		});
 		return matrix;
 	}
