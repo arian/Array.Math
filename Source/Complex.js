@@ -10,7 +10,7 @@ authors:
   - Arian Stolwijk
 
 requires: 
-  - Core/1.2.4:*
+  - Core/Core
 
 provides:
   - Complex
