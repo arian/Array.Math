@@ -161,7 +161,7 @@ var Vector = this.Vector = new Class({
 	to3D: function(){
 		var l = this.elements.length; 
 		if (l < 3){
-			n = 3 - l;
+			var n = 3 - l;
 			do {
 				this.elements.push(0)
 			} while (n--);
