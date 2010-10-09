@@ -1,10 +1,14 @@
-name: Array.Math
-author: astolwijk
-current: 0.1.3
-category: Native
-tags: [Math,Calculus,Statistics,Vectors,Matrices,Geometry]
-demo: http://www.aryweb.nl/projects/Array.Math/
-docs: http://github.com/arian/Array.Math/blob/master/README.md
+name: "Array.Math"
+
+web: "[mootools.net/forge/p/array_math](http://mootools.net/forge/p/array_math)"
+
+description: "Array.Math is an extension for Array with Math methods."
+
+authors: "[Arian Stolwijk](http://www.aryweb.nl)"
+
+license: "MIT License"
+
+copyright: "Copyright (c) 2010, Arian Stolwijk"
 
 sources:
   - "Source/Array.Math.js"
@@ -12,3 +16,17 @@ sources:
   - "Source/Number.js"
   - "Source/Vector.js"
   - "Source/Matrix.js"
+
+# Values for MooTools forge
+
+author: astolwijk
+
+current: 0.1.3
+
+docs: http://github.com/arian/Array.Math/blob/master/README.md
+
+demo: http://www.aryweb.nl/projects/Array.Math/
+
+category: Native
+
+tags: [Math,Calculus,Statistics,Vectors,Matrices,Geometry]

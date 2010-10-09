@@ -1,5 +1,7 @@
 /*
 ---
+name: Matrix
+
 description: Provides a way to use Matrices in JavaScript
 
 license: MIT-style

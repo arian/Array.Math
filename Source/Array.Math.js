@@ -1,5 +1,7 @@
 /*
 ---
+name: Array.Math
+
 description: Array.Math is an extension for Array with Math methods
 
 license: MIT-style

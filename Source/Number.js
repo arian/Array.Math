@@ -1,5 +1,7 @@
 /*
 ---
+name: Number
+
 description: Provides a way to use Complex Numbers in JavaScript
 
 license: MIT-style

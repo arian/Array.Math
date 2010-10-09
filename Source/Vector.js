@@ -1,5 +1,7 @@
 /*
 ---
+name: Vector
+
 description: Provides a way to use Vectors in JavaScript
 
 license: MIT-style
