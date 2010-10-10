@@ -4,3 +4,6 @@
 [submodule "Specs/jasmine-node"]
 	path = Specs/jasmine-node
 	url = http://github.com/cpojer/jasmine-node.git
+[submodule "Specs/Runner"]
+	path = Specs/Runner
+	url = http://github.com/mootools/mootools-runner.git

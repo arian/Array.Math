@@ -16,7 +16,7 @@ vec = createVector();
 
 describe('Vector', function(){
 	it('Create a vector', function(){
-		expect(new Vector([1,2,3]).inspect()).toBe('[1, 2, 3]')
+		expect(new Vector([1, 2, 3]).inspect()).toBe('[1, 2, 3]')
 	});
 	it('Create a vector from a string', function(){
 		expect(new Vector('1 2 3').inspect()).toBe('[1, 2, 3]')
@@ -59,10 +59,10 @@ describe('Vector.Random', function(){
 
 describe('setElements', function(){
 	it('setElements with array', function(){
-		expect(createVector().setElements([1,2,3]).inspect()).toBe('[1, 2, 3]')
+		expect(createVector().setElements([1, 2, 3]).inspect()).toBe('[1, 2, 3]')
 	});
 	it('setElements with arguments', function(){
-		expect(createVector().setElements(1,2,3).inspect()).toBe('[1, 2, 3]')
+		expect(createVector().setElements(1, 2, 3).inspect()).toBe('[1, 2, 3]')
 	});
 	it('setElements with string', function(){
 		expect(createVector().setElements('1 2 3').inspect()).toBe('[1, 2, 3]')
@@ -92,18 +92,18 @@ describe('getModulus', function(){
 
 describe('isEqual', function(){
 	it('Compare two vectors', function(){
-		expect(new Vector('4 3').isEqual(new Vector(4,3))).toBeTruthy()
+		expect(new Vector('4 3').isEqual(new Vector(4, 3))).toBeTruthy()
 	});
 });
 
 describe('dot', function(){
 	it('Dot product', function(){
-		expect(new Vector('4 3').dot(new Vector(4,3))).toBe(25)
+		expect(new Vector('4 3').dot(new Vector(4, 3))).toBe(25)
 	});
 });
 describe('cross', function(){
 	it('cross product', function(){
-		expect(new Vector('4 3 0').cross(new Vector(4,3,1))).toEqual([3, -4, 4])
+		expect(new Vector('4 3 0').cross(new Vector(4, 3, 1))).toEqual([3, -4, 4])
 	});
 });
 
