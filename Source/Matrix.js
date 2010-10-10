@@ -14,7 +14,7 @@ requires:
   - Core/Array
   - Core/Number
   - Vector
-  - Complex
+  - Complex/Complex
 
 provides:
   - Matrix

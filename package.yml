@@ -12,8 +12,6 @@ copyright: "Copyright (c) 2010, Arian Stolwijk"
 
 sources:
   - "Source/Array.Math.js"
-  - "Source/Complex.js"
-  - "Source/Number.js"
   - "Source/Vector.js"
   - "Source/Matrix.js"
 

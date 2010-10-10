@@ -14,7 +14,7 @@ requires:
   - Core/Array
   - Core/Number
   - Array.Math
-  - Complex
+  - Complex/Complex
 
 provides:
   - Vector
