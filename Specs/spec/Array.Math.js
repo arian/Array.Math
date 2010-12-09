@@ -7,6 +7,21 @@ License:
 */
 
 
+describe('toNumbers', function(){
+
+	it('should transform strings or other types which are values of the array to numbers', function(){
+		expect(['01', '5', 5].toNumbers()).toEqual([1, 5, 5]);
+	});
+});
+
+describe('sortNumbers', function(){
+
+	it('should sort numbers', function(){
+		expect([10, 9, 15, 14, 13].sortNumbers()).toEqual([9, 10, 13, 14, 15]);
+	});
+
+});
+
 describe('sum', function(){
 
 	it('All the entities in the array should be summated', function(){
@@ -136,6 +151,10 @@ describe('median', function(){
 
 	it('even length', function(){
 		expect([1, 5, 2, 8, 7, 2].median()).toBe(3.5);
+	});
+
+	it('should work even with numbers as strings (with leading zeros)', function(){
+		expect(['1', '05', '2', 18, 7, 2].median()).toBe(3.5);
 	});
 
 });

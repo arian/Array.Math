@@ -41,6 +41,16 @@ provides:
 
 Array.implement({
 
+	toNumbers: function(){
+		return this.map(Number.from);
+	},
+
+	sortNumbers: function(){
+		return this.sort(function(a, b){
+			return a - b;
+		});
+	},
+
 	// Calculus
 
 	sum: function(start, length){
@@ -110,9 +120,9 @@ Array.implement({
 	// Statistics
 
 	median: function(){
-		this.sort();
-		var middle = (this.length + 1) / 2;
-		return (this.length % 2) ? this[middle - 1] : (this[middle - 1.5] + this[middle - 0.5]) / 2;
+		var arr = this.toNumbers().sortNumbers();
+		var middle = (arr.length + 1) / 2;
+		return (arr.length % 2) ? arr[middle - 1] : (arr[middle - 1.5] + arr[middle - 0.5]) / 2;
 	},
 
 	variance: function(){

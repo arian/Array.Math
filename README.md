@@ -20,6 +20,22 @@ contains some tests.
 How to use
 ----------
 
+### Array.toNumbers
+
+Transforms each value of the array to a number.
+
+	#JS
+	['1', '13', '300'].toNumbers(); // [1, 13, 300]
+
+### Array.sortNumbers
+
+Sorts an array as numbers. The sort method usually transforms each value to a string and lexically compares the values.
+This will result that '10' will before '2'. This is a quick method to fix that.
+
+	#JS
+	[99, 2, 4, 40, 10].sortNumbers(); [2, 4, 10, 40, 99]
+
+
 ### Array.sum
 
 Sum all the entities of the array
