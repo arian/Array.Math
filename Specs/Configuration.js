@@ -10,24 +10,24 @@ Configuration.name = 'Array.Math';
 
 // Presets - combine the sets and the source to a preset to easily run a test
 Configuration.presets = {
-	
+
 	'all': {
 		sets: ['all'],
 		source: ['dependencies', 'all']
 	}
-	
+
 };
 
 // An object with default presets
 Configuration.defaultPresets = {
 	browser: 'all',
-	nodejs: 'base',
+	nodejs: 'all',
 	jstd: 'all'
 };
 
 
 /*
- * An object with sets. Each item in the object should have an path key, 
+ * An object with sets. Each item in the object should have an path key,
  * that specifies where the spec files are and an array with all the files
  * without the .js extension relative to the given path
  */
