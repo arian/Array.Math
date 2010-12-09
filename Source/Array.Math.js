@@ -80,10 +80,10 @@ Array.implement({
 		});
 	},
 
-	substract: function(substract){
-		var isArray = typeOf(substract) == 'array';
+	subtract: function(subtract){
+		var isArray = typeOf(subtract) == 'array';
 		return this.map(function(entity, i){
-			return entity - (isArray ? substract[i] : substract);
+			return entity - (isArray ? subtract[i] : subtract);
 		});
 	},
 
@@ -118,7 +118,7 @@ Array.implement({
 	variance: function(){
 		var length = this.count(),
 			avg = this.sum() / length;
-		return this.substract(avg).power(2).sum() / length;
+		return this.subtract(avg).power(2).sum() / length;
 	},
 
 	stdDeviation: function(){
@@ -178,7 +178,7 @@ Array.implement({
 	},
 
 	distance: function(p2){
-		return Math.sqrt(this.substract(p2).power(2).sum());
+		return Math.sqrt(this.subtract(p2).power(2).sum());
 	}
 
 });

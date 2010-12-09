@@ -2,9 +2,9 @@ Array.Math
 ==========
 
 Array.Math is a collection of calculation with arrays.
-You can do all kind of things with arrays. You can see them as 
+You can do all kind of things with arrays. You can see them as
 data for statistic analysis, you can see them as vectors and matrices
-for linear algebra, or just use them for calculus like add, substract and
+for linear algebra, or just use them for calculus like add, subtract and
 products or more advanced calculus with sequences.
 
 The next steps are Vectors and Matrices. The aim is to be able to calculate
@@ -12,8 +12,8 @@ eigenvalues and eigenvectors from a given Matrix. Singular Value Decomposition
 would be nice as well. To do this, JavaScript needs to be extended so it can
 handle Complex numbers, this can be found in Complex.js
 
-To be sure all the methods work as expected, there is a Specs folder that 
-contains MooTools SlickSpec tests.
+To be sure all the methods work as expected, there is a Specs folder that
+contains some tests.
 
 ![Screenshot](http://github.com/arian/Array.Math/raw/master/screenshot.png)
 
@@ -27,7 +27,7 @@ Sum all the entities of the array
 	#JS
 	[2,5,1,6].sum(); // 14
 	[2,5,2,7,7,12,8].sum([start],[length])
-	
+
 ### Array.product
 
 Get the product of the array and a number or an array with the same size
@@ -52,7 +52,7 @@ Get the power of each entity in the array
 	[3,6,2].power(3) // [27,216,8]
 	[2,2,2].power([3,4,5]) // [8,16,32]
 
-### Array.add 
+### Array.add
 
 Add a number to each entity in the array
 
@@ -60,13 +60,13 @@ Add a number to each entity in the array
 	[2,5,1].add(4) // [6,9,5]
 	[2,5,1].add([1,2,3]) // [3,7,4]
 
-### Array.substract
+### Array.subtract
 
-Substract a number to each entity of the array
+Subtract a number to each entity of the array
 
 	#JS
-	[6,9,5].substract(4) // [2,5,1]
-	[2,7,4].substract([1,2,3]) // [1,5,1]
+	[6,9,5].subtract(4) // [2,5,1]
+	[2,7,4].subtract([1,2,3]) // [1,5,1]
 
 ### Array.count
 
@@ -92,7 +92,7 @@ Create a sequence
 	[].sequence(function(n){
 		return Math.pow(-1,n);
 	},[start],[length]);
-	
+
 	// A recursive function without a return
 	// Fibonacci
 	[1,1].sequence(function(n){
@@ -139,7 +139,7 @@ Find the dot product between two vectors
 
 Find the cross product between two vectors.
 
-Tip, if you use this in combination with Array.vectorLength(), you will 
+Tip, if you use this in combination with Array.vectorLength(), you will
 find the magnitude of the vector
 
 	#JS
@@ -153,20 +153,20 @@ find the magnitude of the vector
 ### Array.projection
 
 Find the projection of the array on a certain vector
-For example: you have a vector in a certain direction, and you want to 
-know the vector projected on another vector, for example the vector that 
+For example: you have a vector in a certain direction, and you want to
+know the vector projected on another vector, for example the vector that
 describes the x- and the y-axis. This is usefull when you want to devide
 vector in components (for force analysis).
 
-Tip, if you use this in combination with Array.vectorLength(), you will 
+Tip, if you use this in combination with Array.vectorLength(), you will
 find the magnitude of the vector
 
 	#JS
 	[3,3].projection([2,0]) // [3,0]
-	
+
 	// Find the force along the x-axis in this 3d space
 	[600,263,768].projection([1,0,0]); // [600,0,0]
-	
+
 	// Find the force along the line in the xy-area with slope 0.5
 	[600,235,267].projection([1,0.5]);
 
@@ -183,8 +183,8 @@ Find the vector of a vector
 
 	#JS
 	[3,6,2].vectorLength() // 7
-	
-	// Find the magnitude of the force [150,300,100] in the 3d space 
+
+	// Find the magnitude of the force [150,300,100] in the 3d space
 	[150,300,100].vectorLength();
 
 

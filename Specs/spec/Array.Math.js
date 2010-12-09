@@ -6,78 +6,79 @@ License:
 	MIT-style license.
 */
 
+
 describe('sum', function(){
-	
+
 	it('All the entities in the array should be summated', function(){
 		expect([1, 2, 3].sum()).toBe(6)
 	});
-	
+
 	it('Sum a part of the array', function(){
 		expect([2, 5, 2, 7, 7, 12, 8].sum(2, 3)).toBe(16);
 	});
-	
-	
+
+
 });
 
 describe('product', function(){
-	
+
 	it('The product of an array and a number', function(){
 		expect([2, 5, 6, 2].product(3)).toEqual([6, 15, 18, 6]);
 	});
-	
+
 	it('The product of an array with another array', function(){
 		expect([2, 5, 6, 2].product([5, 2, 8, 4])).toEqual([10, 10, 48, 8])
 	});
-	
+
 });
 
 describe('quotient', function(){
-	
+
 	it('The quotient of an array and a number', function(){
 		expect([9, 12, 15].quotient(3)).toEqual([3, 4, 5]);
 	});
-	
+
 	it('The quotient of an array with another array', function(){
 		expect([2, 10, 24].quotient([2, 2, 8])).toEqual([1, 5, 3])
 	});
-	
+
 });
 
 describe('power', function(){
-	
+
 	it('The power of an array and a number', function(){
 		expect([3, 6, 2].power(3)).toEqual([27, 216, 8]);
 	});
-	
+
 	it('The power of an array with another array', function(){
 		expect([3, 6, 2].power([3, 2, 1])).toEqual([27, 36, 2]);
 	});
-	
+
 });
 
 describe('add', function(){
-	
+
 	it('add a number to each entity of the array', function(){
 		expect([2, 5, 1].add(4)).toEqual([6, 9, 5]);
 	});
-	
+
 	it('add two arrays', function(){
 		expect([3, 6, 2].add([3, 2, 1])).toEqual([6, 8, 3]);
 	});
-	
+
 });
 
 
-describe('substract', function(){
-	
-	it('substract a number from each entity of the array', function(){
-		expect([6, 9, 5].substract(4)).toEqual([2, 5, 1]);
+describe('subtract', function(){
+
+	it('subtract a number from each entity of the array', function(){
+		expect([6, 9, 5].subtract(4)).toEqual([2, 5, 1]);
 	});
-	
-	it('substract two arrays', function(){
-		expect([6, 9, 5].substract([4, 5, 3])).toEqual([2, 4, 2]);
+
+	it('subtract two arrays', function(){
+		expect([6, 9, 5].subtract([4, 5, 3])).toEqual([2, 4, 2]);
 	});
-	
+
 });
 
 describe('count', function(){
@@ -93,50 +94,50 @@ describe('range', function(){
 });
 
 describe('sequence', function(){
-	
+
 	it('Should return e', function(){
-		
+
 		var factorial = function(n){
 			if(n == 0) return 1;
 			var ans = 1;
-			for(var i = n-1; i; i--) 
+			for(var i = n-1; i; i--)
 				ans = ans * (i + 1);
 			return ans;
 		};
 
-		
+
 		var e = [].sequence(function(n){
 			return 1 / factorial(n);
 		}, 0, 10).sum();
 		e = Math.round(e * 1e9) * 1e-9;
 		expect(e).toBe(2.718281526);
-		
+
 	});
-	
+
 	it('create a sequence', function(){
 		expect([].sequence(function(n){
 				return Math.pow(-1, n);
 			}, 0, 5)).toEqual([1, -1, 1, -1, 1]);
 	});
-	
+
 	it('create a recursive sequence (fibonacci)', function(){
 		expect([1, 1].sequence(function(n){
 			this[n + 2] = this[n] + this[n + 1];
 		}, 0, 4)).toEqual([1, 1, 2, 3, 5, 8]);
 	});
-	
+
 });
 
 describe('median', function(){
-	
+
 	it('odd length', function(){
 		expect([1, 5, 2, 8, 7].median()).toBe(5);
 	});
-	
+
 	it('even length', function(){
 		expect([1, 5, 2, 8, 7, 2].median()).toBe(3.5);
 	});
-	
+
 });
 
 describe('variance', function(){
@@ -188,11 +189,11 @@ describe('vectorLength', function(){
 });
 
 describe('normalize', function(){
-	
+
 	it('Normalize a vector to a unit vector', function(){
 		expect([8, 6].normalize()).toEqual([4/5, 3/5]);
 	});
-	
+
 	it('Normalize vector length', function(){
 		expect([8, 6].normalize().vectorLength()).toBe(1);
 	});
