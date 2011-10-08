@@ -198,6 +198,8 @@ describe('projection', function(){
 describe('determinant', function(){
 	it('Calculate the determinant', function(){
 		expect([[4, 6], [3, 5]].determinant()).toBe(2);
+		expect([[5, 6, 4], [6, 3, 7], [5, 4, 2]].determinant()).toBe(64);
+		expect([[5, 3, 2, 2], [9, 5, 2, 9], [6, 8, 9, 4], [0, 6, 3, 4]].determinant()).toBe(692);
 	});
 });
 
