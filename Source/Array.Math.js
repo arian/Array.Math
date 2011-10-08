@@ -74,7 +74,7 @@ function Laplace(matrix){
 function copy(array, i)
 {
 	var copied = [];
-	array.forEach(function(line){
+	array.each(function(line){
 		copied.push(line.slice(i));
 	});
 	return copied;
