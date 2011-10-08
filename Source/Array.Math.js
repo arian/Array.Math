@@ -38,6 +38,47 @@ provides:
 
 ...
 */
+(function(){
+
+function isSquare(matrix){
+	var n = matrix.count();
+	return matrix.every(function(line){
+		return line.count() == n;
+	});
+}
+
+function Sarrus(m){
+	return m[0][0] * m[1][1] * m[2][2] +
+		m[0][1] * m[1][2] * m[2][0] +
+		m[0][2] * m[1][0] * m[2][1] -
+		m[0][2] * m[1][1] * m[2][0] -
+		m[0][1] * m[1][0] * m[2][2] -
+		m[0][0] * m[1][2] * m[2][1];
+}
+
+function Laplace(matrix){
+	var det = 0,
+		l = matrix.length,
+		cache = copy(matrix, 1);
+
+	for (var i = 0; i < l; ++i){
+		det += Math.pow(-1, i+2) * matrix[i][0] * copy(cache).splice(i, 1).determinant();
+	}
+
+	return det;
+}
+
+/**
+ * Returns a two-level deep copy of an array.
+ */
+function copy(array, i)
+{
+	var copied = [];
+	array.forEach(function(line){
+		copied.push(line.slice(i));
+	});
+	return copied;
+}
 
 Array.implement({
 
@@ -165,8 +206,18 @@ Array.implement({
 	},
 
 	determinant: function(){
-		if (this.count() != 2) return 0; // only 2x2 matrices for now
-		return this[0][0] * this[1][1] - this[0][1] * this[1][0];
+		if (!isSquare(this)) return 0; // only square matrices have determinants
+		switch (this.count())
+		{
+			case 1:
+				return this[0];
+			case 2:
+				return this[0][0] * this[1][1] - this[0][1] * this[1][0];
+			case 3:
+				return Sarrus(this);
+			default:
+				return Laplace(this);
+		}
 	},
 
 	vectorLength: function(){
@@ -192,3 +243,5 @@ Array.implement({
 	}
 
 });
+
+})()
