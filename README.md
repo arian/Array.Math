@@ -188,10 +188,12 @@ find the magnitude of the vector
 
 ### Array:determinant
 
-Find the determinant of a 2 by 2 matrix
+Find the determinant of a square matrix
 
 	#JS
 	[[4, 6], [3, 5]].determinant() // 2
+	[[5, 6, 4], [6, 3, 7], [5, 4, 2]].determinant() // 64
+	[[5, 3, 2, 2], [9, 5, 2, 9], [6, 8, 9, 4], [0, 6, 3, 4]].determinant() // -692
 
 ### Array:vectorLength
 
